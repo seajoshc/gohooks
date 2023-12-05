@@ -43,7 +43,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Process the payload here
 	fmt.Printf("Received component: %+v\n", payload.Component)
-	fmt.Printf("Received parameters: %+v\n", payload.Parameters)
+	fmt.Printf("-->with parameters: %+v\n", payload.Parameters)
 
 	// Respond to the webhook sender
 	fmt.Fprintf(w, "Webhook received and processed")
