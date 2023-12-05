@@ -54,5 +54,5 @@ func main() {
 	fmt.Printf("Starting webhooks server on localhost:%s/compass\n", port)
 	fmt.Println("ngrok http 8888")
 	http.HandleFunc("/compass", webhookHandler)
-	log.Fatal(http.ListenAndServe(port, nil))
+	log.Panic(http.ListenAndServe(port, nil))
 }
