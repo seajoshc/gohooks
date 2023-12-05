@@ -14,4 +14,4 @@ Clone and `go build`. Install [ngrok](https://ngrok.com) or similar.
 
 `ngrok http 8888`
 
-Use the URL ngrok gives you + `/compass` i.e. `https://1e99-69-420-11-214.ngrok-free.app/compass`
+Use the URL ngrok gives you + `/compass` e.g. `https://1e99-69-420-11-214.ngrok-free.app/compass`
