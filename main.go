@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// Define structs to match the JSON structure
+// Structs to match Compass component JSON structure
 type Component struct {
 	ID         string `json:"id"`
 	Name       string `json:"name"`
@@ -50,8 +50,9 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	port := ":8080"
-	fmt.Printf("Starting gohooks server on port %s\n", port)
-	http.HandleFunc("/webhook", webhookHandler)
+	port := ":8888"
+	fmt.Printf("Starting webhooks server on localhost:%s/compass\n", port)
+	fmt.Println("ngrok http 8888")
+	http.HandleFunc("/compass", webhookHandler)
 	log.Fatal(http.ListenAndServe(port, nil))
 }
